@@ -1,12 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mapstyle.css" />
+
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Hotel Finder</title>
+  </head>
+
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="fa fa-times js-menu-toggle form-control-feedback">
+          </span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-3">
+            <div class="site-logo">
+              <a href="index.html" class="font-weight-bold">Hotel Finder</a>
+            </div>
+          </div>
+
+          <div class="col-9 text-right">
+            <span class="d-inline-block d-lg-none"
+              ><a
+                href="#"
+                class="text-primary site-menu-toggle js-menu-toggle py-5"
+              >
+                <span class="fa fa-bars form-control-feedback"></span></a
+            ></span>
+
+            <nav
+              class="site-navigation text-right ml-auto d-none d-lg-block"
+              role="navigation"
+            >
+              <ul class="site-menu main-menu js-clone-nav ml-auto">
+                <li class="active">
+                  <a href="./index.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                  <a href="./about.html" class="nav-link">About</a>
+                </li>
+                <li>
+                  <a href="./contact.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </header>
+    <main class="hero container home-section">
+      <div class="details-side">
+        <h2 class="title-text">Hotel List</h2>
+
+        <div id="listing">
+          <table id="resultsTable">
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="hotel-search">
+        <div id="locationField">
+          <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input
+              type="text"
+              id="autocomplete"
+              class="form-control"
+              placeholder="Search location..."
+            />
+          </div>
+        </div>
+
+        <div id="controls">
+          <select id="country">
+            <option value="all">All</option>
+            <option value="au">Australia</option>
+            <option value="br">Brazil</option>
+            <option value="ca">Canada</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="mx">Mexico</option>
+            <option value="nz">New Zealand</option>
+            <option value="it">Italy</option>
+            <option value="za">South Africa</option>
+            <option value="es">Spain</option>
+            <option value="pt">Portugal</option>
+            <option value="us" selected>U.S.A.</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+      <div style="display: none">
+        <div id="info-content">
+          <table>
+            <tr id="iw-url-row" class="iw_table_row">
+              <td id="iw-icon" class="iw_table_icon"></td>
+              <td id="iw-url"></td>
+            </tr>
+            <tr id="iw-address-row" class="iw_table_row">
+              <td class="iw_attribute_name">Address:</td>
+              <td id="iw-address"></td>
+            </tr>
+            <tr id="iw-phone-row" class="iw_table_row">
+              <td class="iw_attribute_name">Telephone:</td>
+              <td id="iw-phone"></td>
+            </tr>
+            <tr id="iw-rating-row" class="iw_table_row">
+              <td class="iw_attribute_name">Rating:</td>
+              <td id="iw-rating"></td>
+            </tr>
+            <tr id="iw-website-row" class="iw_table_row">
+              <td class="iw_attribute_name">Website:</td>
+              <td id="iw-website"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <footer class="home-footer d-xl-none d-lg-none">
+        <div class="container footer-section">
+          <hr />
+          <div class="footer-content">
+            <p>© 2018-2021 | Hotel Finder | All rights reserved</p>
+            <div>
+              <a href="http://youtube.com" class="ml-2">
+                <img src="./images/youtubeicon.png" alt="Youtube" />
+              </a>
+              <a href="http://facebook.com" class="ml-2">
+                <img src="./images/facebookicon.png" alt="Facebook" />
+              </a>
+              <a href="http://instagram.com" class="ml-2">
+                <img src="./images/instaicon.png" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <footer class="home-footer d-none d-xl-block d-lg-block">
+      <div class="container footer-section">
+        <hr />
+        <div class="footer-content">
+          <p>© 2018-2021 | Hotel Finder | All rights reserved</p>
+          <div>
+            <a href="http://youtube.com" class="ml-2">
+              <img src="./images/youtubeicon.png" alt="Youtube" />
+            </a>
+            <a href="http://facebook.com" class="ml-2">
+              <img src="./images/facebookicon.png" alt="Facebook" />
+            </a>
+            <a href="http://instagram.com" class="ml-2">
+              <img src="./images/instaicon.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly&channel=2"
+      async
+    ></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
