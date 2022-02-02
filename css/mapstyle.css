@@ -1,0 +1,185 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+       body {
+        padding: 0 !important;
+      }
+      
+      table {
+        font-size: 12px;
+      }
+      #results {
+        font-size: 15px;
+      }
+      #resultsTable tbody td {
+        background: #f5f5f5;
+        box-shadow: 0px 11px 14px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        padding: 5px 10px;
+        position: relative;
+      }
+      tbody tr {
+        border-bottom: 5px solid white;
+        font-weight: bold;
+      }
+      .hotel-search {
+        background: #fff;
+        position: absolute;
+        right: 15px;
+        width: 700px;
+        top: 30px;
+      }
+      
+      #map {
+        /* margin-top: 200px; */
+        position: relative;
+        top: 140px;
+        width: 685px;
+        height: auto;
+        right: 0px;
+        margin: 10px;
+        height: 100%;
+      }
+      .home-section {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      #listing {
+        width: 400px;
+        height: 100%;
+        overflow: auto;
+        cursor: pointer;
+        overflow-x: hidden;
+        margin-top: 32px;
+      }
+      
+      #findhotels {
+        font-size: 14px;
+      }
+      
+      #locationField {
+        margin: 0 8px;
+      }
+      /* Bootstrap 4 text input with search icon */
+      
+      .has-search .form-control {
+        padding-left: 2.375rem;
+      }
+      
+      .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+      }
+      
+      #autocomplete {
+        background: #f5f5f5;
+        box-shadow: 0px 11px 14px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        border: none;
+      }
+      
+      #country {
+        width: 98%;
+        border: none;
+        background: #f5f5f5;
+        box-shadow: 0px 11px 14px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        padding: 5px;
+        margin: 5px;
+      }
+      
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      
+      #resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+      }
+      
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      
+      .iw_table_row {
+        height: 18px;
+      }
+      
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      
+      .iw_table_icon {
+        text-align: right;
+      }
+      #resultsTable {
+        width: 100%;
+      }
+      .title-text {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      @media (max-width: 1200px) {
+        .hotel-search {
+          width: 55%;
+          top: 80px;
+        }
+        #map {
+          top: 200px;
+        }
+        .title-text {
+          top: 50px;
+          z-index: 100;
+          position: relative;
+        }
+        #resultsTable {
+          margin-top: 53px;
+        }
+      }
+      
+      @media (max-width: 990px) {
+        .home-section {
+          display: block;
+        }
+        #listing {
+          width: 100%;
+        }
+        #map {
+          width: 100%;
+          margin-top: 0px;
+          right: 10px;
+        }
+        .hotel-search {
+          position: relative;
+          width: 100%;
+          margin-left: 15px;
+        }
+        .title-text {
+          top: 100px;
+          position: relative;
+          margin-left: 10px;
+        }
+        #listing {
+          margin-top: 60px;
+        }
+      }
+      
