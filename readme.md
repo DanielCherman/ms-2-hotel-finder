@@ -31,11 +31,6 @@ During development of website I used
 
 
 ## Testing
-
-I made 
-
-## Deployment
-
 During Development so far i tested each block of the website separately. Manual testing was the main part of this project, As I was going for a user focus I wanted to ensure all parts of the project were user-centric and therefore manually adding in the code and ensuring the code was working before moving onto the next stage of development. I tested responsiveness on Am I Responsive In addition I checked the code using w3c css and markup validator.
 
 ## Deployment
